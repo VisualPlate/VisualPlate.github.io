@@ -58,6 +58,7 @@ html, body {
 }
 * {box-sizing: border-box;}
 h1,h2,h3,h4,h5,h6,p {margin: 0;padding: 0;}
+h1,h2,h3,h4,h5,h6 {color: var(--text-primary);}
 a {
     color: var(--text-secondary);
     text-decoration: none;
@@ -143,6 +144,13 @@ body {
     background-color: var(--mob-tab-bg-hover);
     color: var(--mob-tab-color-hover);
 }
+.max-1600 {
+    display: flex;
+    max-width: 1600px;
+    gap: 15px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
 @media (max-width:800px) {
     .mobile-nav {
         display: block;
@@ -152,5 +160,10 @@ body {
     }
     #main-tab-content {
         display: none;
+    }
+}
+@media (max-width:1600px) {
+    .max-1600 {
+        justify-content: center;
     }
 }

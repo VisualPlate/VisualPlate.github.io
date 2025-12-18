@@ -41,6 +41,16 @@
     --abt-tab-padding:6px;
     --abt-tab-br:6px;
 
+    /*Mobile nav settings*/
+    --mobile-nav-bg:var(--dark-gray);
+    --mobile-nav-width:100%;
+    --mobile-nav-height:max-content;
+
+    --mob-tab-width:100%;
+    --mob-tab-height:40px;
+    --mob-tab-bg-hover:var(--darkest-gray);
+    --mob-tab-color-hover:var(--text-primary);
+
 }
 html, body {
     height: 100%;
@@ -109,4 +119,38 @@ body {
 .top-nav-icon {
     height: 16px;
     width: 16px;
+}
+.mobile-nav {
+    display: none;
+    cursor: pointer;
+    padding-inline: 10px;
+}
+.mobile-nav img {
+    transform: rotate(180deg);
+}
+#mobile-nav-show {
+    display: flex;
+    flex-direction: column;
+    width: var(--mobile-nav-width);
+    height: var(--mobile-nav-height);
+    background: var(--mobile-nav-bg);
+}
+.mob-tab {
+    height: var(--mob-tab-height);
+    width: var(--mob-tab-width);
+}
+.mob-tab:hover {
+    background-color: var(--mob-tab-bg-hover);
+    color: var(--mob-tab-color-hover);
+}
+@media (max-width:800px) {
+    .mobile-nav {
+        display: block;
+    }
+    #main-abt-content {
+        display: none;
+    }
+    #main-tab-content {
+        display: none;
+    }
 }
